@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Banks</title>
+</head>
+<body>
+    <a href="/main">Main</a>
+    <h1>Банки</h1>
+    <div th:each="u: ${banks}">
+        <span th:text="${u.getName()}"></span>
+        <span th:text="${u.getAddress()}"></span>
+        <form th:method="delete" th:action="@{/banks/{id} (id = ${u.getId()})}" style="display: inline" >
+            <button type="submit">Удалить</button>
+        </form>
+    </div>
+
+    <h2>Форма создания</h2>
+    <form th:method="POST" th:action="@{/banks}" th:object="${newBank}">
+        <label>
+            Название:
+            <input type="text" th:field="*{name}">
+        </label>
+        <br/>
+
+        <label>
+            Адрес:
+            <input type="text" th:field="*{address}">
+        </label>
+        <br/>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
