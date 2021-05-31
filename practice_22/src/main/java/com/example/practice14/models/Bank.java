@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "bank")
-public class Bank {
+public class Bank{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
