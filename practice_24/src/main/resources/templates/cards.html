@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+</head>
+<body>
+    <a href="/main">Main</a>
+    <h2>Фильтр</h2>
+    <form th:method="POST" th:action="@{/cards/filter}" th:object="${filterCard}">
+        <label>
+            Номер карты:
+            <input type="number" th:field="*{cardNumber}">
+        </label>
+
+        <br/>
+
+        <label>
+            Код:
+            <input type="number" th:field="*{code}">
+        </label>
+
+        <br/>
+
+        <label>
+            Название банка:
+            <input type="text" th:field="*{bankName}">
+        </label>
+
+        <br/>
+
+        <button type="submit">Фильтр</button>
+    </form>
+    <h1>Карты</h1>
+    <div th:each="u: ${cards}">
+        <span th:text="${u.getId()}"></span>
+        <span th:text="${u.getCardNumber()}"></span>
+        <span th:text="${u.getCode()}"></span>
+        <form th:method="delete" th:action="@{/cards/{id} (id = ${u.getId()})}" style="display: inline" >
+            <button type="submit">Удалить</button>
+        </form>
+        <form th:method="get" th:action="@{/cards/{id}/bank (id = ${u.getId()})}" style="display: inline" >
+            <button type="submit">Банк</button>
+        </form>
+    </div>
+
+    <h2>Форма создания</h2>
+    <form th:method="POST" th:action="@{/cards}" th:object="${newCard}">
+        <label>
+            Номер карты:
+            <input type="number" th:field="*{cardNumber}">
+        </label>
+
+        <br/>
+
+        <label>
+            Код:
+            <input type="number" th:field="*{code}">
+        </label>
+
+        <br/>
+
+        <label>
+            Название банка:
+            <input type="text" th:field="*{bankName}">
+        </label>
+
+        <br/>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
