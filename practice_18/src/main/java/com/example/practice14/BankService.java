@@ -18,17 +18,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BankService {
     private final BankRepo bankRepo;
-//    private static ArrayList<Bank> banks = new ArrayList<>();
-
-//    @PostConstruct
-//    void init() {
-//        session = sessionFactory.openSession();
-//        builder = session.getCriteriaBuilder();
-//        bankCriteriaQuery = builder.createQuery(Bank.class);
-//        root = bankCriteriaQuery.from(Bank.class);
-//        banks = new ArrayList<>(session.createQuery("select b from Bank b",
-//                Bank.class).getResultList());
-//    }
 
     public List<Bank> filter(Bank filter){
         return bankRepo.findBanksByNameAndAddress(filter.getName(), filter.getAddress());

@@ -22,24 +22,4 @@ public class ConfigurationClass {
         config.setDriverClassName("org.postgresql.Driver");
         return new HikariDataSource(config);
     }
-
-//    @Bean
-//    public LocalSessionFactoryBean factoryBean(DataSource dataSource) {
-//        LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
-//        sessionFactoryBean.setDataSource(dataSource);
-//        sessionFactoryBean.setPackagesToScan("com.example.practice14");
-//        Properties properties = new Properties();
-//        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-//        sessionFactoryBean.setHibernateProperties(properties);
-//        return sessionFactoryBean;
-//    }
-//
-//    @Bean
-//    public PlatformTransactionManager
-//    platformTransactionManager(LocalSessionFactoryBean factoryBean){
-//        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-//        transactionManager.setSessionFactory(factoryBean.getObject());
-//        return transactionManager;
-//    }
-
 }

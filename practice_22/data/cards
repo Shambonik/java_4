@@ -1,5 +1,5 @@
-Card{id=3, cardNumber=12125121261, code=123, bank=Bank{id=1, name='sber', address='asdasd'}}
-Card{id=4, cardNumber=13131731317135, code=342, bank=Bank{id=1, name='sber', address='asdasd'}}
-Card{id=7, cardNumber=1234567898, code=154, bank=Bank{id=5, name='tochka', address='asdada'}}
-Card{id=9, cardNumber=123456789000, code=153, bank=Bank{id=1, name='sber', address='asdasd'}}
-Card{id=12, cardNumber=10293872364, code=143, bank=Bank{id=1, name='sber', address='asdasd'}}
+Card{id=4, cardNumber=123456789047, code=365, bank=Bank{id=2, name='sber', address='Москва, пр. Вернадского, 86'}}
+Card{id=5, cardNumber=12345678, code=243, bank=Bank{id=3, name='tochka', address='adsasdasd'}}
+Card{id=6, cardNumber=123456789039485, code=123, bank=Bank{id=2, name='sber', address='Москва, пр. Вернадского, 86'}}
+Card{id=8, cardNumber=999999, code=999, bank=Bank{id=2, name='sber', address='Москва, пр. Вернадского, 86'}}
+Card{id=9, cardNumber=11111111111111, code=1111, bank=Bank{id=2, name='sber', address='Москва, пр. Вернадского, 86'}}
